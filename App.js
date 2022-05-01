@@ -4,7 +4,6 @@ import Header from './Components/Header';
 import Main from './Components/Main';
 import Cart from './Components/Cart';
 import data from './assets/Data';
-import Cart from './Components/Cart';
 
 export default function App() {
   const { dishes } = data;
