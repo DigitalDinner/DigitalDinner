@@ -12,7 +12,7 @@ export default function App() {
     const exist = cartItems.find((itemId) => itemId.id === dish.id);
     if (exist) {
       setCartItems(
-        cartItems.map((x) =>
+        cartItems.map((itemId) =>
         itemId.id === dish.id ? { ...exist, qty: exist.qty + 1 } : itemId
         )
       );
@@ -20,7 +20,7 @@ export default function App() {
       setCartItems([...cartItems, { ...product, qty: 1 }]);
     }
   };
-  const onRemove = (product) => {
+  const onRemove = (dish) => {
     const exist = cartItems.find((itemId) => itemId.id === dish.id);
     if (exist.qty === 1) {
       setCartItems(cartItems.filter((itemId) => itemId.id !== dish.id));
